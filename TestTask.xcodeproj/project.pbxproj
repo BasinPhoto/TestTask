@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C28E55C0260DF5E200FB97C1 /* TestTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */; };
-		C28E55C2260DF5E200FB97C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55C1260DF5E200FB97C1 /* ContentView.swift */; };
+		C28E55C2260DF5E200FB97C1 /* DiceGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55C1260DF5E200FB97C1 /* DiceGameView.swift */; };
 		C28E55C4260DF5E300FB97C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28E55C3260DF5E300FB97C1 /* Assets.xcassets */; };
 		C28E55C7260DF5E300FB97C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28E55C6260DF5E300FB97C1 /* Preview Assets.xcassets */; };
+		C28E55D3260DFAA700FB97C1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */; };
+		C28E55D7260DFEE700FB97C1 /* DiceGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55D6260DFEE700FB97C1 /* DiceGameModel.swift */; };
+		C28E55DB260DFFDF00FB97C1 /* DiceGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55DA260DFFDF00FB97C1 /* DiceGameVM.swift */; };
+		C28E55DE260E02C800FB97C1 /* DropedDicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */; };
+		C28E55E2260E734700FB97C1 /* MoneyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55E1260E734700FB97C1 /* MoneyBetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C28E55BC260DF5E200FB97C1 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskApp.swift; sourceTree = "<group>"; };
-		C28E55C1260DF5E200FB97C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C28E55C1260DF5E200FB97C1 /* DiceGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameView.swift; sourceTree = "<group>"; };
 		C28E55C3260DF5E300FB97C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28E55C6260DF5E300FB97C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C28E55C8260DF5E300FB97C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		C28E55D6260DFEE700FB97C1 /* DiceGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameModel.swift; sourceTree = "<group>"; };
+		C28E55DA260DFFDF00FB97C1 /* DiceGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameVM.swift; sourceTree = "<group>"; };
+		C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropedDicesView.swift; sourceTree = "<group>"; };
+		C28E55E1260E734700FB97C1 /* MoneyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,13 @@
 		C28E55BE260DF5E200FB97C1 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				C28E55D9260DFFAB00FB97C1 /* ViewModel */,
+				C28E55D5260DFEAA00FB97C1 /* models */,
 				C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */,
-				C28E55C1260DF5E200FB97C1 /* ContentView.swift */,
+				C28E55C1260DF5E200FB97C1 /* DiceGameView.swift */,
+				C28E55E1260E734700FB97C1 /* MoneyBetView.swift */,
+				C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */,
+				C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */,
 				C28E55C3260DF5E300FB97C1 /* Assets.xcassets */,
 				C28E55C8260DF5E300FB97C1 /* Info.plist */,
 				C28E55C5260DF5E300FB97C1 /* Preview Content */,
@@ -67,6 +82,22 @@
 				C28E55C6260DF5E300FB97C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C28E55D5260DFEAA00FB97C1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C28E55D6260DFEE700FB97C1 /* DiceGameModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C28E55D9260DFFAB00FB97C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C28E55DA260DFFDF00FB97C1 /* DiceGameVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28E55C2260DF5E200FB97C1 /* ContentView.swift in Sources */,
+				C28E55D3260DFAA700FB97C1 /* BackgroundView.swift in Sources */,
+				C28E55DE260E02C800FB97C1 /* DropedDicesView.swift in Sources */,
+				C28E55E2260E734700FB97C1 /* MoneyBetView.swift in Sources */,
+				C28E55C2260DF5E200FB97C1 /* DiceGameView.swift in Sources */,
+				C28E55D7260DFEE700FB97C1 /* DiceGameModel.swift in Sources */,
 				C28E55C0260DF5E200FB97C1 /* TestTaskApp.swift in Sources */,
+				C28E55DB260DFFDF00FB97C1 /* DiceGameVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

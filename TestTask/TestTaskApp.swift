@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TestTaskApp: App {
+    let game = DiceGameVM()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DiceGameView(viewModel: game)
         }
     }
 }
