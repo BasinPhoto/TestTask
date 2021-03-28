@@ -62,13 +62,10 @@
 		C28E55BE260DF5E200FB97C1 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */,
 				C28E55D9260DFFAB00FB97C1 /* ViewModel */,
 				C28E55D5260DFEAA00FB97C1 /* models */,
-				C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */,
-				C28E55C1260DF5E200FB97C1 /* DiceGameView.swift */,
-				C28E55E1260E734700FB97C1 /* MoneyBetView.swift */,
-				C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */,
-				C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */,
+				C28E55E52610889500FB97C1 /* Views */,
 				C28E55C3260DF5E300FB97C1 /* Assets.xcassets */,
 				C28E55C8260DF5E300FB97C1 /* Info.plist */,
 				C28E55C5260DF5E300FB97C1 /* Preview Content */,
@@ -98,6 +95,17 @@
 				C28E55DA260DFFDF00FB97C1 /* DiceGameVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C28E55E52610889500FB97C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C28E55C1260DF5E200FB97C1 /* DiceGameView.swift */,
+				C28E55E1260E734700FB97C1 /* MoneyBetView.swift */,
+				C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */,
+				C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

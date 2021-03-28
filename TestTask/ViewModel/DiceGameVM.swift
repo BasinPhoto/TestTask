@@ -18,9 +18,13 @@ class DiceGameVM: ObservableObject {
     var betSetted: Bool {
         return model.bet != nil
     }
-    
+
     var drawnNumbers: (Int?, Int?) {
         return model.drawnNumbers
+    }
+    
+    var bet: Int? {
+        model.bet
     }
     
     private static func createGame() -> DiceGameModel {

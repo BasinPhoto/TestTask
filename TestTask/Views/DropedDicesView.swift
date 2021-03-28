@@ -13,14 +13,14 @@ struct DropedDicesView: View {
     
     var body: some View {
         HStack{
-            Image(String(dice1Value))
-                .resizable()
-                .frame(width: 100, height: 100)
-                .colorInvert()
-            Image(String(dice2Value))
-                .resizable()
-                .frame(width: 100, height: 100)
-                .colorInvert()
+            Group{
+                Image(String(dice1Value))
+                    .resizable()
+                Image(String(dice2Value))
+                    .resizable()
+            }
+            .frame(width: 100, height: 100)
+            .colorInvert()
         }
     }
 }

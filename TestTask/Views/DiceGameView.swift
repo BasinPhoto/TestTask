@@ -28,14 +28,16 @@ struct DiceGameView: View {
                 })
                 .padding()
     
-                if let drawnNumber1 = viewModel.drawnNumbers.0, let drawnNumber2 = viewModel.drawnNumbers.1 {
-                    DropedDicesView(dice1Value: drawnNumber1, dice2Value: drawnNumber2)
+                if let drawnNumber1 = viewModel.drawnNumbers.0,
+                   let drawnNumber2 = viewModel.drawnNumbers.1 {
+                    DropedDicesView(dice1Value: drawnNumber1,
+                                    dice2Value: drawnNumber2)
                         .padding(.top, 50)
                 }
                 
                 Spacer()
                 
-                MoneyBetView(viewModel: viewModel, money: viewModel.player.money, bet: 50)
+                MoneyBetView(viewModel: viewModel, money: viewModel.player.money, bet: viewModel.bet ?? 50)
                     .padding(.bottom, 70)
                 
                 Button(action: {
@@ -50,6 +52,8 @@ struct DiceGameView: View {
                         .cornerRadius(10)
                 })
                 .padding()
+                .opacity(!viewModel.betSetted ? 0.5 : 1)
+                .disabled(!viewModel.betSetted)
             }
         }
     }

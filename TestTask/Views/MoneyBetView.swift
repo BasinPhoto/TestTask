@@ -21,7 +21,7 @@ struct MoneyBetView: View {
                     .foregroundColor(.yellow)
                 
                 Text("$\(money)")
-                    .font(Font.system(size: 50, weight: .heavy))
+                    .font(Font.system(size: 35, weight: .heavy))
                     .fontWeight(.bold)
                     .foregroundColor(.yellow)
             }
@@ -47,7 +47,8 @@ struct MoneyBetView: View {
                         .background(Color.red)
                         .cornerRadius(10)
                 })
-                .disabled(viewModel.betSetted)
+                .opacity(viewModel.betSetted || bet > viewModel.player.money ? 0.5 : 1)
+                .disabled(viewModel.betSetted || bet > viewModel.player.money)
             }
             .padding()
         }
