@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,15 @@
 		C28E55DB260DFFDF00FB97C1 /* DiceGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55DA260DFFDF00FB97C1 /* DiceGameVM.swift */; };
 		C28E55DE260E02C800FB97C1 /* DropedDicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */; };
 		C28E55E2260E734700FB97C1 /* MoneyBetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55E1260E734700FB97C1 /* MoneyBetView.swift */; };
+		C28E55EA2611E38800FB97C1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E55E92611E38700FB97C1 /* WebView.swift */; };
+		C28E55EE2611EF3300FB97C1 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55ED2611EF3300FB97C1 /* FacebookShare */; };
+		C28E55F02611EF3300FB97C1 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55EF2611EF3300FB97C1 /* FacebookCore */; };
+		C28E55F22611EF3300FB97C1 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55F12611EF3300FB97C1 /* FacebookGamingServices */; };
+		C28E55F42611EF3300FB97C1 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55F32611EF3300FB97C1 /* FacebookLogin */; };
+		C28E55F72612072700FB97C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C28E55F62612072600FB97C1 /* GoogleService-Info.plist */; };
+		C28E55FB2612080300FB97C1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55FA2612080300FB97C1 /* FirebaseAnalytics */; };
+		C28E55FD2612080300FB97C1 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55FC2612080300FB97C1 /* FirebaseDynamicLinks */; };
+		C28E560626122D3A00FB97C1 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +39,10 @@
 		C28E55DA260DFFDF00FB97C1 /* DiceGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameVM.swift; sourceTree = "<group>"; };
 		C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropedDicesView.swift; sourceTree = "<group>"; };
 		C28E55E1260E734700FB97C1 /* MoneyBetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBetView.swift; sourceTree = "<group>"; };
+		C28E55E92611E38700FB97C1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C28E55F62612072600FB97C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C28E55FF26120C0600FB97C1 /* TestTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestTask.entitlements; sourceTree = "<group>"; };
+		C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +50,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28E55F42611EF3300FB97C1 /* FacebookLogin in Frameworks */,
+				C28E55F22611EF3300FB97C1 /* FacebookGamingServices in Frameworks */,
+				C28E55EE2611EF3300FB97C1 /* FacebookShare in Frameworks */,
+				C28E55FB2612080300FB97C1 /* FirebaseAnalytics in Frameworks */,
+				C28E55F02611EF3300FB97C1 /* FacebookCore in Frameworks */,
+				C28E55FD2612080300FB97C1 /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +65,7 @@
 		C28E55B3260DF5E200FB97C1 = {
 			isa = PBXGroup;
 			children = (
+				C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */,
 				C28E55BE260DF5E200FB97C1 /* TestTask */,
 				C28E55BD260DF5E200FB97C1 /* Products */,
 			);
@@ -62,12 +82,14 @@
 		C28E55BE260DF5E200FB97C1 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				C28E55FF26120C0600FB97C1 /* TestTask.entitlements */,
 				C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */,
 				C28E55D9260DFFAB00FB97C1 /* ViewModel */,
 				C28E55D5260DFEAA00FB97C1 /* models */,
 				C28E55E52610889500FB97C1 /* Views */,
 				C28E55C3260DF5E300FB97C1 /* Assets.xcassets */,
 				C28E55C8260DF5E300FB97C1 /* Info.plist */,
+				C28E55F62612072600FB97C1 /* GoogleService-Info.plist */,
 				C28E55C5260DF5E300FB97C1 /* Preview Content */,
 			);
 			path = TestTask;
@@ -104,6 +126,7 @@
 				C28E55E1260E734700FB97C1 /* MoneyBetView.swift */,
 				C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */,
 				C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */,
+				C28E55E92611E38700FB97C1 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +147,14 @@
 			dependencies = (
 			);
 			name = TestTask;
+			packageProductDependencies = (
+				C28E55ED2611EF3300FB97C1 /* FacebookShare */,
+				C28E55EF2611EF3300FB97C1 /* FacebookCore */,
+				C28E55F12611EF3300FB97C1 /* FacebookGamingServices */,
+				C28E55F32611EF3300FB97C1 /* FacebookLogin */,
+				C28E55FA2612080300FB97C1 /* FirebaseAnalytics */,
+				C28E55FC2612080300FB97C1 /* FirebaseDynamicLinks */,
+			);
 			productName = TestTask;
 			productReference = C28E55BC260DF5E200FB97C1 /* TestTask.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +182,10 @@
 				Base,
 			);
 			mainGroup = C28E55B3260DF5E200FB97C1;
+			packageReferences = (
+				C28E55EC2611EF3200FB97C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				C28E55F92612080300FB97C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C28E55BD260DF5E200FB97C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +202,7 @@
 			files = (
 				C28E55C7260DF5E300FB97C1 /* Preview Assets.xcassets in Resources */,
 				C28E55C4260DF5E300FB97C1 /* Assets.xcassets in Resources */,
+				C28E55F72612072700FB97C1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,11 +214,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28E55D3260DFAA700FB97C1 /* BackgroundView.swift in Sources */,
+				C28E55EA2611E38800FB97C1 /* WebView.swift in Sources */,
 				C28E55DE260E02C800FB97C1 /* DropedDicesView.swift in Sources */,
 				C28E55E2260E734700FB97C1 /* MoneyBetView.swift in Sources */,
 				C28E55C2260DF5E200FB97C1 /* DiceGameView.swift in Sources */,
 				C28E55D7260DFEE700FB97C1 /* DiceGameModel.swift in Sources */,
 				C28E55C0260DF5E200FB97C1 /* TestTaskApp.swift in Sources */,
+				C28E560626122D3A00FB97C1 /* NotificationDelegate.swift in Sources */,
 				C28E55DB260DFFDF00FB97C1 /* DiceGameVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +349,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestTask/TestTask.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestTask/Preview Content\"";
 				DEVELOPMENT_TEAM = QUXUWH42GX;
@@ -323,6 +363,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lectrum.TestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +374,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestTask/TestTask.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestTask/Preview Content\"";
 				DEVELOPMENT_TEAM = QUXUWH42GX;
@@ -345,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lectrum.TestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +416,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C28E55EC2611EF3200FB97C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+		C28E55F92612080300FB97C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C28E55ED2611EF3300FB97C1 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28E55EC2611EF3200FB97C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		C28E55EF2611EF3300FB97C1 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28E55EC2611EF3200FB97C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		C28E55F12611EF3300FB97C1 /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28E55EC2611EF3200FB97C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		C28E55F32611EF3300FB97C1 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28E55EC2611EF3200FB97C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		C28E55FA2612080300FB97C1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28E55F92612080300FB97C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C28E55FC2612080300FB97C1 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28E55F92612080300FB97C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C28E55B4260DF5E200FB97C1 /* Project object */;
 }

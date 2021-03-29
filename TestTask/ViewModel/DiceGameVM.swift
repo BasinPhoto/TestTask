@@ -10,6 +10,11 @@ import Foundation
 class DiceGameVM: ObservableObject {
     @Published private var model: DiceGameModel = DiceGameVM.createGame()
     
+    
+    private static func createGame() -> DiceGameModel {
+        return DiceGameModel(name: "Foo", bet: 50)
+    }
+    
     //MARK: - Access to the model
     var player: DiceGameModel.Player {
         model.player
@@ -23,12 +28,20 @@ class DiceGameVM: ObservableObject {
         return model.drawnNumbers
     }
     
-    var bet: Int? {
-        model.bet
+    var bet: Int {
+        if let unwrappedBet = model.bet { return unwrappedBet }
+        else { return 50 }
     }
     
-    private static func createGame() -> DiceGameModel {
-        return DiceGameModel(name: "Foo", bet: 50)
+    var status: String? {
+        if let status = model.status {
+            switch status {
+            case .win:
+                return "win"
+            case .lose:
+                return "lose"
+            }
+        } else { return nil }
     }
     
     //MARK: - Intents
@@ -42,5 +55,6 @@ class DiceGameVM: ObservableObject {
     
     func makeBet(_ value: Int) {
         model.makeBet(value)
+        model.status = nil
     }
 }

@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import FBSDKCoreKit
+import Firebase
 
 @main
 struct TestTaskApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
     let game = DiceGameVM()
     var body: some Scene {
         WindowGroup {

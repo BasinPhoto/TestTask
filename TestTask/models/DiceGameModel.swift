@@ -14,11 +14,17 @@ struct DiceGameModel {
         var money: Int = 500
     }
     
+    enum turnStatus {
+        case win
+        case lose
+    }
+    
     var player: Player
     let dices: [String] = ["1", "2", "3", "4", "5", "6"]
     var dropResult: Int?
     var bet: Int?
     var drawnNumbers: (Int?, Int?)
+    var status: turnStatus?
     
     init(name: String, bet: Int) {
         self.player = Player(name: name)
@@ -27,7 +33,6 @@ struct DiceGameModel {
     mutating func dropDices() {
         drawnNumbers.0 = Int.random(in: 1...6)
         drawnNumbers.1 = Int.random(in: 1...6)
-        print(drawnNumbers)
         checkResult()
     }
     
@@ -45,11 +50,13 @@ struct DiceGameModel {
     
     mutating private func winCase() {
         player.money += bet!
+        status = .win
         nextBet()
     }
     
     mutating private func loseCase() {
         player.money -= bet!
+        status = .lose
         nextBet()
     }
     

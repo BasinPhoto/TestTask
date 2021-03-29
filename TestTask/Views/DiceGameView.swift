@@ -6,17 +6,32 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct DiceGameView: View {
     @ObservedObject var viewModel: DiceGameVM
+    @StateObject var delegate = NotificationDelegate()
+    
+    @State var alert: Bool = false
     
     var body: some View {
         ZStack{
-            BackgroundView()
+            BackgroundView(viewModel: viewModel)
             
             VStack{
                 Button(action: {
                     viewModel.resetGame()
+                    
+                    let content = UNMutableNotificationContent()
+                    content.title = "Game restarted"
+                    content.subtitle = "Now you can start your game from begining!"
+                    content.sound = UNNotificationSound.default
+                    
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                    
+                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                    UNUserNotificationCenter.current().add(request)
+                    
                 }, label: {
                     Text("New Game")
                         .font(.title)
@@ -27,7 +42,7 @@ struct DiceGameView: View {
                         .cornerRadius(10)
                 })
                 .padding()
-    
+                
                 if let drawnNumber1 = viewModel.drawnNumbers.0,
                    let drawnNumber2 = viewModel.drawnNumbers.1 {
                     DropedDicesView(dice1Value: drawnNumber1,
@@ -37,7 +52,7 @@ struct DiceGameView: View {
                 
                 Spacer()
                 
-                MoneyBetView(viewModel: viewModel, money: viewModel.player.money, bet: viewModel.bet ?? 50)
+                MoneyBetView(viewModel: viewModel, money: viewModel.player.money, bet: viewModel.bet)
                     .padding(.bottom, 70)
                 
                 Button(action: {
@@ -56,14 +71,30 @@ struct DiceGameView: View {
                 .disabled(!viewModel.betSetted)
             }
         }
+        .onAppear(perform: {
+            UNUserNotificationCenter.current()
+                .requestAuthorization(options: [.alert, . badge, .sound]) { (success, error) in
+                    if success {
+                        return
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                        alert.toggle()
+                        
+                    }
+                }
+            
+            UNUserNotificationCenter.current().delegate = delegate
+        })
+        .alert(isPresented: $alert, content: {
+            return Alert(title: Text("Notifications needed!"), message: Text("Please enable notification access in settings panel"), dismissButton: .cancel())
+        })
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = DiceGameVM()
         return Group {
-            DiceGameView(viewModel: game)
+            DiceGameView(viewModel: DiceGameVM(), delegate: NotificationDelegate())
         }
     }
 }

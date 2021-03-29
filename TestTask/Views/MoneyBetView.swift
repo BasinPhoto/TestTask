@@ -30,7 +30,7 @@ struct MoneyBetView: View {
             Spacer ()
             
             VStack(alignment: .trailing) {
-                Stepper("\(bet)", value: $bet, in: 50...500, step: 50)
+                Stepper("\(bet)", value: $bet, in: 50...viewModel.player.money, step: 50)
                     .fixedSize(horizontal: true, vertical: false)
                     .font(Font.system(size: 35, weight: .bold))
                     .foregroundColor(.yellow)
@@ -47,8 +47,8 @@ struct MoneyBetView: View {
                         .background(Color.red)
                         .cornerRadius(10)
                 })
-                .opacity(viewModel.betSetted || bet > viewModel.player.money ? 0.5 : 1)
-                .disabled(viewModel.betSetted || bet > viewModel.player.money)
+                .opacity(viewModel.betSetted ? 0.5 : 1)
+                .disabled(viewModel.betSetted)
             }
             .padding()
         }
