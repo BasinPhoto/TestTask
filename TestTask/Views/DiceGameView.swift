@@ -45,9 +45,9 @@ struct DiceGameView: View {
                 
                 if let drawnNumber1 = viewModel.drawnNumbers.0,
                    let drawnNumber2 = viewModel.drawnNumbers.1 {
-                    DropedDicesView(dice1Value: drawnNumber1,
+                    DropedDicesView(viewModel: viewModel, dice1Value: drawnNumber1,
                                     dice2Value: drawnNumber2)
-                        .padding(.top, 50)
+                        .padding(.top, 30)
                 }
                 
                 Spacer()
@@ -56,6 +56,9 @@ struct DiceGameView: View {
                     .padding(.bottom, 70)
                 
                 Button(action: {
+                    withAnimation(Animation.easeOut(duration: 0.5)) {
+                        viewModel.rotation += 360 * 6
+                    }
                     viewModel.dropDices()
                 }, label: {
                     Text("Drop Dices!")

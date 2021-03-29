@@ -9,6 +9,7 @@ import Foundation
 
 class DiceGameVM: ObservableObject {
     @Published private var model: DiceGameModel = DiceGameVM.createGame()
+    @Published var rotation: Int = 0
     
     
     private static func createGame() -> DiceGameModel {
@@ -46,6 +47,7 @@ class DiceGameVM: ObservableObject {
     
     //MARK: - Intents
     func resetGame() {
+        rotation = 0
         model = DiceGameVM.createGame()
     }
     
@@ -56,5 +58,6 @@ class DiceGameVM: ObservableObject {
     func makeBet(_ value: Int) {
         model.makeBet(value)
         model.status = nil
+        rotation = 0
     }
 }

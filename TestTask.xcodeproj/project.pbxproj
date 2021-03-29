@@ -25,6 +25,7 @@
 		C28E55FB2612080300FB97C1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55FA2612080300FB97C1 /* FirebaseAnalytics */; };
 		C28E55FD2612080300FB97C1 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = C28E55FC2612080300FB97C1 /* FirebaseDynamicLinks */; };
 		C28E560626122D3A00FB97C1 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */; };
+		C28E56092612587D00FB97C1 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28E56082612587C00FB97C1 /* RulesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		C28E55F62612072600FB97C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C28E55FF26120C0600FB97C1 /* TestTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestTask.entitlements; sourceTree = "<group>"; };
 		C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		C28E56082612587C00FB97C1 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				C28E55DD260E02C800FB97C1 /* DropedDicesView.swift */,
 				C28E55D2260DFAA700FB97C1 /* BackgroundView.swift */,
 				C28E55E92611E38700FB97C1 /* WebView.swift */,
+				C28E56082612587C00FB97C1 /* RulesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				C28E55E2260E734700FB97C1 /* MoneyBetView.swift in Sources */,
 				C28E55C2260DF5E200FB97C1 /* DiceGameView.swift in Sources */,
 				C28E55D7260DFEE700FB97C1 /* DiceGameModel.swift in Sources */,
+				C28E56092612587D00FB97C1 /* RulesView.swift in Sources */,
 				C28E55C0260DF5E200FB97C1 /* TestTaskApp.swift in Sources */,
 				C28E560626122D3A00FB97C1 /* NotificationDelegate.swift in Sources */,
 				C28E55DB260DFFDF00FB97C1 /* DiceGameVM.swift in Sources */,
