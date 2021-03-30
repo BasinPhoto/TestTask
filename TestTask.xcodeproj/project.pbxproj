@@ -67,7 +67,6 @@
 		C28E55B3260DF5E200FB97C1 = {
 			isa = PBXGroup;
 			children = (
-				C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */,
 				C28E55BE260DF5E200FB97C1 /* TestTask */,
 				C28E55BD260DF5E200FB97C1 /* Products */,
 			);
@@ -84,6 +83,7 @@
 		C28E55BE260DF5E200FB97C1 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				C28E560526122D3A00FB97C1 /* NotificationDelegate.swift */,
 				C28E55FF26120C0600FB97C1 /* TestTask.entitlements */,
 				C28E55BF260DF5E200FB97C1 /* TestTaskApp.swift */,
 				C28E55D9260DFFAB00FB97C1 /* ViewModel */,
